@@ -3,7 +3,6 @@ from django.contrib.auth.models import User
 
 STATUS = ((0, "Draft"), (1, "Published"))
 
-
 class Post(models.Model):
     
     title = models.CharField(max_length=200,unique=True)
@@ -20,7 +19,6 @@ class Post(models.Model):
         
 def __str__(self):
     return f"{self.title} | written by {self.author}"
-
     
 class Comment(models.Model):
     
